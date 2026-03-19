@@ -1,0 +1,31 @@
+{
+  "major_arcana": [
+    {"id": 0, "name": "愚者", "name_en": "The Fool", "keywords": ["新开始", "冒险", "自由", "天真"], "upright": "新的开始，充满可能性，勇敢踏出第一步", "reversed": "鲁莽冒失，缺乏计划，逃避责任"},
+    {"id": 1, "name": "魔术师", "name_en": "The Magician", "keywords": ["意志力", "技能", "创造", "行动"], "upright": "拥有实现目标的能力，善用资源，意志坚定", "reversed": "操控他人，技能未发挥，欺骗"},
+    {"id": 2, "name": "女祭司", "name_en": "The High Priestess", "keywords": ["直觉", "神秘", "内在智慧", "潜意识"], "upright": "倾听内心声音，隐藏的知识即将揭示", "reversed": "忽视直觉，秘密被揭露，表面文章"},
+    {"id": 3, "name": "女皇", "name_en": "The Empress", "keywords": ["丰盛", "母性", "自然", "创造力"], "upright": "丰收与繁荣，创造力旺盛，滋养与关怀", "reversed": "依赖他人，创造力受阻，过度保护"},
+    {"id": 4, "name": "皇帝", "name_en": "The Emperor", "keywords": ["权威", "稳定", "结构", "父性"], "upright": "建立秩序，领导力强，稳固的基础", "reversed": "专制独裁，缺乏弹性，控制欲强"},
+    {"id": 5, "name": "教皇", "name_en": "The Hierophant", "keywords": ["传统", "信仰", "教育", "规范"], "upright": "遵循传统，寻求精神指引，正式的承诺", "reversed": "打破规则，非传统，质疑权威"},
+    {"id": 6, "name": "恋人", "name_en": "The Lovers", "keywords": ["爱情", "选择", "和谐", "价值观"], "upright": "重要的选择，关系和谐，价值观一致", "reversed": "关系失衡，价值观冲突，错误的选择"},
+    {"id": 7, "name": "战车", "name_en": "The Chariot", "keywords": ["意志", "胜利", "控制", "决心"], "upright": "克服障碍，坚定前行，掌控局面", "reversed": "失去控制，方向不明，强行推进"},
+    {"id": 8, "name": "力量", "name_en": "Strength", "keywords": ["勇气", "耐心", "内在力量", "慈悲"], "upright": "以柔克刚，内在力量强大，勇敢面对挑战", "reversed": "自我怀疑，软弱，压抑情绪"},
+    {"id": 9, "name": "隐士", "name_en": "The Hermit", "keywords": ["内省", "孤独", "智慧", "寻求"], "upright": "独处反思，寻找内在真理，精神探索", "reversed": "孤立无援，拒绝帮助，过度隐居"},
+    {"id": 10, "name": "命运之轮", "name_en": "Wheel of Fortune", "keywords": ["命运", "转变", "循环", "机遇"], "upright": "命运转折，好运降临，顺势而为", "reversed": "厄运，抗拒变化，坏运气"},
+    {"id": 11, "name": "正义", "name_en": "Justice", "keywords": ["公平", "真相", "因果", "法律"], "upright": "公正的结果，诚实面对，因果报应", "reversed": "不公正，逃避责任，不诚实"},
+    {"id": 12, "name": "倒吊人", "name_en": "The Hanged Man", "keywords": ["暂停", "牺牲", "新视角", "等待"], "upright": "换个角度看问题，暂时放手，等待时机", "reversed": "无谓的牺牲，拖延，固执己见"},
+    {"id": 13, "name": "死神", "name_en": "Death", "keywords": ["结束", "转变", "过渡", "新生"], "upright": "一个阶段的结束，重大转变，蜕变新生", "reversed": "抗拒改变，停滞不前，无法放手"},
+    {"id": 14, "name": "节制", "name_en": "Temperance", "keywords": ["平衡", "耐心", "调和", "适度"], "upright": "寻求平衡，耐心等待，融合与调和", "reversed": "失衡，过度，缺乏耐心"},
+    {"id": 15, "name": "恶魔", "name_en": "The Devil", "keywords": ["束缚", "物质", "阴暗面", "执念"], "upright": "被物质或欲望束缚，面对阴暗面", "reversed": "挣脱束缚，释放，重获自由"},
+    {"id": 16, "name": "塔", "name_en": "The Tower", "keywords": ["突变", "混乱", "启示", "崩塌"], "upright": "突如其来的变化，旧有结构崩塌，启示", "reversed": "避免灾难，延迟的崩塌，恐惧变化"},
+    {"id": 17, "name": "星星", "name_en": "The Star", "keywords": ["希望", "灵感", "平静", "更新"], "upright": "充满希望，灵感涌现，内心平静", "reversed": "失去希望，绝望，缺乏信心"},
+    {"id": 18, "name": "月亮", "name_en": "The Moon", "keywords": ["幻觉", "恐惧", "潜意识", "迷惑"], "upright": "面对恐惧，潜意识的信息，事情不明朗", "reversed": "恐惧消散，真相大白，混乱结束"},
+    {"id": 19, "name": "太阳", "name_en": "The Sun", "keywords": ["成功", "喜悦", "活力", "光明"], "upright": "充满活力，成功喜悦，一切顺利", "reversed": "过度乐观，暂时的挫折，能量受阻"},
+    {"id": 20, "name": "审判", "name_en": "Judgement", "keywords": ["觉醒", "更新", "召唤", "宽恕"], "upright": "内心觉醒，重要的召唤，宽恕与释放", "reversed": "自我怀疑，拒绝觉醒，无法原谅"},
+    {"id": 21, "name": "世界", "name_en": "The World", "keywords": ["完成", "整合", "成就", "圆满"], "upright": "圆满完成，整合一切，达到目标", "reversed": "未竟之事，缺乏完结，走捷径"}
+  ],
+  "spreads": {
+    "single": {"name": "单张牌", "description": "今日指引", "positions": ["当前能量"]},
+    "three": {"name": "三张牌", "description": "过去·现在·未来", "positions": ["过去", "现在", "未来"]},
+    "celtic": {"name": "凯尔特十字", "description": "深度解析", "positions": ["当前处境", "挑战/阻碍", "远因", "近因", "可能结果", "近期未来", "你的态度", "外部影响", "希望与恐惧", "最终结果"]}
+  }
+}

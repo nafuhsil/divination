@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>问天 · 占卜系统</title>
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="stars"></div>
+
+  <header>
+    <h1>✦ 问天 ✦</h1>
+    <p class="subtitle">塔罗 · 易经 · 星座 · 签文</p>
+  </header>
+
+  <main>
+    <!-- 问题输入 -->
+    <section class="question-section">
+      <textarea id="question" placeholder="在心中默想你的问题，或直接输入……（可留空获取今日指引）" rows="3"></textarea>
+    </section>
+
+    <!-- 占卜方式选择 -->
+    <section class="methods">
+      <button class="method-btn active" data-method="tarot">🃏 塔罗牌</button>
+      <button class="method-btn" data-method="iching">☯ 易经六爻</button>
+      <button class="method-btn" data-method="zodiac">⭐ 星座运势</button>
+      <button class="method-btn" data-method="fortune">🏮 抽签</button>
+    </section>
+
+    <!-- 塔罗牌选项 -->
+    <section id="tarot-options" class="sub-options">
+      <label>选择牌阵：</label>
+      <select id="spread-select">
+        <option value="single">单张牌 · 今日指引</option>
+        <option value="three">三张牌 · 过去现在未来</option>
+        <option value="celtic">凯尔特十字 · 深度解析</option>
+      </select>
+    </section>
+
+    <!-- 星座选项 -->
+    <section id="zodiac-options" class="sub-options" style="display:none">
+      <div class="zodiac-row">
+        <select id="sign-select">
+          <option value="">选择星座</option>
+          <option value="白羊座">白羊座 ♈</option>
+          <option value="金牛座">金牛座 ♉</option>
+          <option value="双子座">双子座 ♊</option>
+          <option value="巨蟹座">巨蟹座 ♋</option>
+          <option value="狮子座">狮子座 ♌</option>
+          <option value="处女座">处女座 ♍</option>
+          <option value="天秤座">天秤座 ♎</option>
+          <option value="天蝎座">天蝎座 ♏</option>
+          <option value="射手座">射手座 ♐</option>
+          <option value="摩羯座">摩羯座 ♑</option>
+          <option value="水瓶座">水瓶座 ♒</option>
+          <option value="双鱼座">双鱼座 ♓</option>
+        </select>
+        <input type="date" id="birthday" placeholder="生日（可选）">
+      </div>
+    </section>
+
+    <!-- 开始占卜按钮 -->
+    <div class="cta">
+      <button id="divine-btn" class="divine-btn">
+        <span class="btn-text">开始占卜</span>
+        <span class="btn-loading" style="display:none">占卜中…</span>
+      </button>
+    </div>
+
+    <!-- 结果区域 -->
+    <section id="result" class="result" style="display:none">
+      <div id="result-cards" class="result-cards"></div>
+      <div id="result-interpretation" class="interpretation"></div>
+    </section>
+  </main>
+
+  <footer>
+    <p>✦ 占卜仅供娱乐，命运掌握在自己手中 ✦</p>
+  </footer>
+
+  <script src="/static/script.js"></script>
+</body>
+</html>

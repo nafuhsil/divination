@@ -1,0 +1,452 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg: #0a0a1a;
+  --surface: #12122a;
+  --surface2: #1a1a35;
+  --accent: #c9a84c;
+  --accent2: #9b6dff;
+  --text: #e8e0f0;
+  --text-dim: #8878a8;
+  --border: #2a2a4a;
+  --glow: rgba(201, 168, 76, 0.3);
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Georgia', 'STSong', serif;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* 星空背景 */
+.stars {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 20% 50%, rgba(120, 80, 200, 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 80% 20%, rgba(80, 120, 200, 0.08) 0%, transparent 60%);
+}
+
+.stars::before, .stars::after {
+  content: '';
+  position: absolute;
+  width: 2px; height: 2px;
+  background: white;
+  border-radius: 50%;
+  box-shadow:
+    120px 40px rgba(255,255,255,0.6),
+    340px 80px rgba(255,255,255,0.4),
+    560px 120px rgba(255,255,255,0.7),
+    780px 60px rgba(255,255,255,0.3),
+    200px 200px rgba(255,255,255,0.5),
+    450px 180px rgba(255,255,255,0.6),
+    680px 240px rgba(255,255,255,0.4),
+    900px 160px rgba(255,255,255,0.7),
+    100px 320px rgba(255,255,255,0.3),
+    300px 380px rgba(255,255,255,0.5),
+    520px 300px rgba(255,255,255,0.6),
+    740px 360px rgba(255,255,255,0.4),
+    960px 280px rgba(255,255,255,0.3),
+    1100px 100px rgba(255,255,255,0.5),
+    1200px 300px rgba(255,255,255,0.4),
+    1300px 200px rgba(255,255,255,0.6),
+    50px 450px rgba(255,255,255,0.3),
+    250px 500px rgba(255,255,255,0.5),
+    480px 480px rgba(255,255,255,0.4),
+    700px 520px rgba(255,255,255,0.6),
+    850px 440px rgba(255,255,255,0.3),
+    1050px 480px rgba(255,255,255,0.5);
+}
+
+header {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 60px 20px 30px;
+}
+
+header h1 {
+  font-size: 3rem;
+  color: var(--accent);
+  letter-spacing: 0.3em;
+  text-shadow: 0 0 30px var(--glow), 0 0 60px rgba(201,168,76,0.2);
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% { text-shadow: 0 0 30px var(--glow), 0 0 60px rgba(201,168,76,0.2); }
+  50% { text-shadow: 0 0 50px var(--glow), 0 0 100px rgba(201,168,76,0.3); }
+}
+
+.subtitle {
+  color: var(--text-dim);
+  letter-spacing: 0.5em;
+  font-size: 0.9rem;
+  margin-top: 10px;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.question-section {
+  margin-bottom: 24px;
+}
+
+textarea {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 1rem;
+  padding: 16px;
+  resize: none;
+  transition: border-color 0.3s, box-shadow 0.3s;
+  line-height: 1.6;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 20px rgba(201,168,76,0.15);
+}
+
+textarea::placeholder { color: var(--text-dim); }
+
+.methods {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.method-btn {
+  flex: 1;
+  min-width: 120px;
+  padding: 12px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text-dim);
+  font-family: inherit;
+  font-size: 0.95rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  letter-spacing: 0.05em;
+}
+
+.method-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.method-btn.active {
+  background: linear-gradient(135deg, rgba(201,168,76,0.15), rgba(155,109,255,0.1));
+  border-color: var(--accent);
+  color: var(--accent);
+  box-shadow: 0 0 15px rgba(201,168,76,0.1);
+}
+
+.sub-options {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 20px;
+  color: var(--text-dim);
+  font-size: 0.9rem;
+}
+
+.sub-options label { margin-right: 12px; }
+
+select, input[type="date"] {
+  background: var(--surface2);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: 0.9rem;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+select:focus, input[type="date"]:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+
+.zodiac-row {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.zodiac-row select, .zodiac-row input { flex: 1; min-width: 140px; }
+
+.cta {
+  text-align: center;
+  margin: 28px 0;
+}
+
+.divine-btn {
+  background: linear-gradient(135deg, #c9a84c, #9b6dff);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1.1rem;
+  letter-spacing: 0.2em;
+  padding: 16px 60px;
+  position: relative;
+  transition: all 0.3s;
+  box-shadow: 0 4px 30px rgba(201,168,76,0.3);
+}
+
+.divine-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 40px rgba(201,168,76,0.4);
+}
+
+.divine-btn:active { transform: translateY(0); }
+
+.divine-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* 结果区域 */
+.result {
+  animation: fade-in 0.8s ease;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.result-cards {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+/* 塔罗牌 */
+.tarot-card {
+  background: linear-gradient(160deg, var(--surface2), var(--surface));
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 20px 16px;
+  text-align: center;
+  width: 160px;
+  transition: transform 0.3s;
+  animation: card-appear 0.6s ease backwards;
+}
+
+.tarot-card:hover { transform: translateY(-4px); }
+
+@keyframes card-appear {
+  from { opacity: 0; transform: rotateY(90deg); }
+  to { opacity: 1; transform: rotateY(0); }
+}
+
+.tarot-card .position {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.tarot-card .card-symbol {
+  font-size: 2.5rem;
+  margin: 8px 0;
+}
+
+.tarot-card .card-name {
+  color: var(--accent);
+  font-size: 1rem;
+  margin-bottom: 4px;
+}
+
+.tarot-card .card-reversed {
+  font-size: 0.75rem;
+  color: #ff8888;
+  margin-bottom: 8px;
+}
+
+.tarot-card .card-meaning {
+  font-size: 0.78rem;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* 易经卦象 */
+.hexagram-display {
+  text-align: center;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 100%;
+}
+
+.hexagram-lines {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: 6px;
+  align-items: center;
+  margin: 16px 0;
+}
+
+.hex-line {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.hex-line-bar {
+  height: 6px;
+  background: var(--accent);
+  border-radius: 3px;
+}
+
+.hex-line.yang .hex-line-bar { width: 60px; }
+.hex-line.yin .hex-line-bar { width: 24px; }
+.hex-line.changing { color: #ff8888; }
+.hex-line.changing .hex-line-bar { background: #ff8888; }
+
+.hexagram-name {
+  font-size: 1.4rem;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+}
+
+/* 签文 */
+.fortune-display {
+  text-align: center;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 100%;
+}
+
+.fortune-number {
+  font-size: 0.85rem;
+  color: var(--text-dim);
+  letter-spacing: 0.2em;
+  margin-bottom: 8px;
+}
+
+.fortune-grade {
+  display: inline-block;
+  padding: 4px 16px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.fortune-grade.上上签 { background: rgba(201,168,76,0.2); color: var(--accent); border: 1px solid var(--accent); }
+.fortune-grade.上签 { background: rgba(100,200,100,0.15); color: #88dd88; border: 1px solid #88dd88; }
+.fortune-grade.中签 { background: rgba(100,150,255,0.15); color: #88aaff; border: 1px solid #88aaff; }
+.fortune-grade.下签 { background: rgba(255,100,100,0.15); color: #ff8888; border: 1px solid #ff8888; }
+
+.fortune-poem {
+  font-size: 1.1rem;
+  color: var(--text);
+  letter-spacing: 0.1em;
+  line-height: 1.8;
+}
+
+/* 解读文字 */
+.interpretation {
+  background: linear-gradient(135deg, var(--surface), var(--surface2));
+  border: 1px solid var(--border);
+  border-left: 3px solid var(--accent);
+  border-radius: 12px;
+  padding: 24px 28px;
+  line-height: 1.9;
+  font-size: 1rem;
+  color: var(--text);
+  white-space: pre-wrap;
+}
+
+.interpretation::before {
+  content: '✦ 占卜解读';
+  display: block;
+  color: var(--accent);
+  font-size: 0.85rem;
+  letter-spacing: 0.2em;
+  margin-bottom: 14px;
+}
+
+/* 星座卡片 */
+.zodiac-card {
+  text-align: center;
+  padding: 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  width: 100%;
+}
+
+.zodiac-symbol {
+  font-size: 3rem;
+  margin-bottom: 8px;
+}
+
+.zodiac-name {
+  font-size: 1.2rem;
+  color: var(--accent);
+  letter-spacing: 0.2em;
+}
+
+footer {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding: 40px 20px;
+  color: var(--text-dim);
+  font-size: 0.8rem;
+  letter-spacing: 0.2em;
+}
+
+/* 加载动画 */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 16px; height: 16px;
+  border: 2px solid rgba(255,255,255,0.3);
+  border-top-color: white;
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  header h1 { font-size: 2rem; }
+  .tarot-card { width: 140px; }
+  .divine-btn { padding: 14px 40px; }
+}
